@@ -88,7 +88,10 @@ function removeDuplicates(new_array){
     unique_array = [];
     sorted_array = new_array.sort();
 
+    // check each item in sorted array to see if it's in unique_array
     sorted_array.forEach((item) => {
+        // indexOf will by default equal -1 if the item is not in the
+        // unique_array
         if(unique_array.indexOf(item) === -1 ){
             unique_array.push(item);
         }
