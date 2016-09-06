@@ -104,3 +104,30 @@ function removeDuplicates(new_array){
 // To test my answer
 my_array = [4,5,2,2,4,6,7,7,4,2,1,4,3,2,4,3,4,5,7,3,2,4,5,6,7];
 removeDuplicates(my_array);
+
+
+/******************************************************
+How would you merge two sorted array?
+******************************************************/
+// Ideas:
+// Add method for 2 arrays in Javascript?
+// Merge two sorted... make sure no numbers get deleted in the process
+// Question specifies "sorted" arrays. Why? How are they sorted?
+// Do the arrays need to be sorted after they are merged?
+// check which one is the longest and add the shorter one to it
+// use splice?
+// this is not the most efficient way
+
+function merge_arrays(array1, array2) {
+    merged_array = array2
+    array1.forEach((item) => {
+        merged_array.push(item);
+    });
+
+    console.log("merged array", merged_array.sort())
+    return merged_array.sort()
+}
+
+random = ['pig', 'house', 'boat', 'cat', 'track', 'dog', 'hog', 'log', 'mouse', 'house']
+more_random = ['flip', 'flop', 'bam', 'bat', 'trap', 'water', 'river', 'peace', 'joy', 'love', 'hope']
+merge_arrays(random, more_random)
